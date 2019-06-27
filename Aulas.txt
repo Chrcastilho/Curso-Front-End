@@ -1,0 +1,7 @@
+HTML linguagem maracacao
+<ul> </ul> lista nao ordenada 
+composta por list id <li> </li>
+
+<ol> </ol> lista ordenada 
+
+<buttunt type: subimit, reset, buttuon
