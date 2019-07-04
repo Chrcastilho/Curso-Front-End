@@ -1,0 +1,26 @@
+body {
+    background-color: #a6a6a6;
+    display: block
+}
+
+.title {
+    margin: 10px 35px
+}
+
+p {
+    font-family: Verdana, Times, serif;
+    margin: 0 10px 5px
+}
+
+a:hover {
+    background-color: #f0f8ff
+}
+
+.css3 {
+    display: block;
+    margin: 20px;
+    width: 5%;
+    height: 20%;
+}
+
+p.pDisable:disabled {}
