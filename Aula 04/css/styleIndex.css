@@ -1,0 +1,48 @@
+a {
+    text-decoration: nome;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+
+p strong {
+    color: green;
+}
+
+.destaque {
+    display: block;
+    border: 1px solid red;
+}
+
+#conteudo-principal {
+    background-color: aliceblue;
+    padding: 50px;
+}
+
+div[id="igual"] {
+    background: yellow;
+}
+
+div[id^="comeceC"] {
+    background: blue;
+}
+
+div[id$="termine"] {
+    background: #87CEEB;
+}
+
+div[id*="contenha"] {
+    background: red;
+}
+
+a.pseudoActive:active {
+    color: rgb(0, 0, 0);
+}
+
+input:checked {
+    height: 5px;
+    width: 5px;
+}
+
+a.pseudo:hover {
+    color: blue;
+}

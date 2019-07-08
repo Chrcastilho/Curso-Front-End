@@ -2,34 +2,131 @@
 <html>
 
 <head>
-    <title>Manual Online</title>
+    <title>Aula 04</title>
     <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/styleIndex.css">
 </head>
 
 <body>
 
-    <img src="Pictures/css-3-logo.png" alt="CSS3" class="css3">
+    <div class="header">
+        <h1>Curso Front-End</h1>
+        <p>Exercicio Aula 04</p>
+    </div>
 
-    <h1 class="title">Manual Online</h1>
+    <div class="topnav">
+        <a href="/index.html">Main</a>
+        <a href="pages/formulario.html">Formulario</a>
+        <a href="pages/dicas.html">Dicas</a>
+        <a href="pages/CSS3.html">CSS3</a>
+    </div>
 
-    <p>O HiperText Markup Language ou simplesmente HTML, continua trazendo grandes contribuições para o advento da internet, pois é o tipo de conteúdo que mais trafega pela rede mundial de computadores. Apesar da enorme importância para o mundo da informação
-        o HTML estancou na versão 4.0.1 desde 1999 e não acompanhou as dinâmicas mudanças que ocorreram nos últimos anos e para atender as necessidades careceu utilizar plugins externos como o flash player e outros. Mas felizmente, isso são coisas do
-        passado, pois a W3C (World Wide Web Consortium) e a WHATWG (Web Hypertext Application Technology Working Group) disponibilizaram uma versão de teste que provavelmente será a nova cara do HTML. Esse artigo mostra as novas características dessa
-        versão que, inclusive, já tem suporte para algumas funcionalidades nos mais conceituados navegadores e brevemente será oficializado por definitivo como o HTML 5.</p>
+    <img src="images/formacao-frontend.png" alt="front-end" class="imagetop">
 
-    <h2 class="title">O que é HTML5</h2>
+    <div class="row">
+        <div class="card">
+            <h2>Curso Front-End</h2>
+            <p>O desenvolvedor front-end é responsável por “dar vida” à interface. Trabalha com a parte da aplicação
+                que interage diretamente com o usuário. Por isso, é importante que esse desenvolvedor também se
+                preocupe com a experiência do usuário.</p>
+            <p>Na parte de estudo, este profissional foca em HTML (linguagem de marcação), CSS (linguagem de
+                estilo) e JavaScript (linguagem de script/programação).</p>
+        </div>
+    </div>
 
-    <p>Surgido a partir de um consórcio entre a W3C (World Wide Web Consortium) e a WHATWG (Web Hypertext Application Technology Working Group), o HTML5 será o novo padrão para a estruturação e apresentação de conteúdo na Word Wide Web trazendo melhorias
-        significativas com novas funcionalidades de semântica e acessibilidade, além de melhorar o suporte aos mais recentes conteúdo multimídias.</p>
+    <div class="row">
+        <div class="card">
+            <h2>Seletor de tipo (TAG)</h2>
+            <p>Com este seletor, selecionamos todas as tags de um mesmo tipo. Por exemplo, se digitarmos a estaremos
+                selecionando todas as tags a (links) da página e poderemos aplicar estilos a elas. Útil para estilos
+                gerais, mas para maior especificidade utilizamos outros seletores.</p>
+            <a href="#">Teste</a>
+        </div>
+    </div>
 
-    <p>As principais mudanças que a nova versão proporcionará aos usuários são: Melhor tratamento de exceção, mais tags para substituir scripts, independência de plataforma e redução da necessidade de plugins externos.</p>
+    <div class="row">
+        <div class="card">
+            <h2>Seletor descendente</h2>
+            <p>Com este seletor, podemos escolher um ou mais elementos que estão dentro de outro, ou seja, que são
+                descendentes do elemento principal. Exemplo: p strong. Com isso, selecionamos apenas tags strong que
+                estão dentro de parágrafos.</p>
+            <p>Exemplo de seletor
+                <strong>Descendente</strong>
+            </p>
+        </div>
+    </div>
 
-    <p>Segredo</p>
+    <div class="row">
+        <div class="card">
+            <h2>Seletor de classe</h2>
+            <p>Seleciona elementos com uma classe específica aplicada. Exemplo: .destaque seleciona todos os elementos
+                com a classe "destaque".</p>
+            <div class="destaque">
+                Div destaque
+            </div>
+            <span class="destaque">
+                Span destaque
+            </span>
+        </div>
+    </div>
 
-    <a href="Pages/dicas.html">Dicas</a>
-    <br>
-    <a href="Pages/formulario.html">Formulario</a>
+    <div class="row">
+        <div class="card">
+            <h2>Seletor de id</h2>
+            <p>Seleciona o elemento com a id especificada. Exemplo: #conteudo-principal irá selecionar o elemento com a
+                id "conteudo-principal". Cada id é única e não pode ser repetida no mesmo documento.</p>
+            <main id="conteudo-principal">
+                <div class="destaque">
+                    Div destaque
+                </div>
+                <span class="destaque">
+                    Span destaque
+                </span>
+            </main>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <h2>Seletores baseado em relacionamento</h2>
+                <p>No CSS temos algumas formas de selecionar elementos baseados nos relacionamentos entre eles.</p>
+                <div id="igual">
+                    E[atributo="valor"]: elementos do tipo E cujo “atributo” seja igual a “valor”.
+                </div>
+                <div id="comeceCom">
+                    E[atributo^="valor"]: elementos do tipo E cujo valor do “atributo” comece com a palavra “valor”.
+                </div>
+                <div id="termine">
+                    E[atributo$=”"valor"]: elementos do tipo E cujo valor do “atributo” termine com a palavra “valor”.
+                </div>
+                <div id="contenha">
+                    E[atributo*="valor"]: elementos do tipo E cujo valor do “atributo” contenha a palavra “valor”.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <h2>Pseudo-classes</h2>
+                <a class="pseudo" href="#">:active - Coincide quando um elemento está sendo ativado pelo usuário.</a>
+                <br>
+                <p>:checked - Representa um checkbox, radio ou option que está ligada ou
+                    alternado para um
+                    estado ligado (true).</p>
+                <input type="radio" name="color" value="Red"> Red<br>
+                <input type="radio" name="color" value="Blue"> Blue<br>
+                <br>
+                <a class="pseudoFocus" href="#">:focus - Aplicada quando um elemento recebe foco</a>
+                <br>
+                <a class="pseudo" href="#">:hover - Corresponde quando o usuário designa um elemento com um dispositivo
+                    apontador,
+                    mas não necessariamente o ativa.</a>
+            </div>
+
+            <div class="footer">
+                <h2>Acelera Theos Curso Front-End</h2>
+            </div>
+
 </body>
 
 </html>
