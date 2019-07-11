@@ -1,0 +1,27 @@
+*{padding:0;margin:0}
+body{display:flex;min-height:100vh;flex-direction:column;
+    background: url(../images/binary-code.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+main{flex:1 0 auto}
+.modal{
+    background-color: #000;
+}
+.image{width:10%;height:10%}
+.header{padding:5px;text-align:center;background:gray;color:#fff;font-size:20px}
+.pai{position:relative}
+.filho{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.esquerda{
+    float: left;
+}
+.button{background-color:#4caf50;border:none;color:#fff;padding:15px 32px;text-align:center;text-decoration:none;display:inline-block;font-size:16px}
+.footer{position:fixed;left:0;bottom:0;width:100%;padding:10px;background-color:gray;color:#000;text-align:center}
+
+.modal{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
