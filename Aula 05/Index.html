@@ -5,7 +5,7 @@
     <title>Aula 05</title>
     <meta charset='utf-8'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/styleIndex.css">
+    <link rel="teste" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
@@ -15,22 +15,24 @@
     <div class="main">
         <section id="center-box">
             <div class="left-box">
-                <h1 class="namelogo">Logfy</h1>
-                <img src="images/Lock_font_awesome.svg.png" alt="lock" class="imagelock">
+                <div class="left-box-inside">
+                    <h1 class="namelogo">Logfy</h1>
+                    <br>
+                    <img src="images/Lock_font_awesome.svg.png" alt="lock" class="imagelock">
+                </div>
             </div>
             <div class="right-box">
-                
-                <h1 class="tituloconta">Acesse sua conta</h1>
-                <p>Nao possui uam conta?</p><a href="#">Cadastra-se</a>
-                <form action="sucesso.php" method="POST">
-                    <input type="text" placeholder="E-mail">
-                    <input idtype="password" placeholder="Senha">
-                    <input type="button" class="button" value="Login">
-                    <input type="checkbox" class="lembra" value="bool"> Lembrar de min
-                    <div class="link">
-                        <a class="linkesqueceu" href="/index.html">Esqueceu sua senha?</a>
-                    </div>
-
+                <div class="right-box-inside">
+                    <h1 class="tituloconta">Acesse sua conta</h1>
+                    <p>Não possui uma conta?</p><a href="#">Cadastra-se</a>
+                    <form action="sucesso.php" method="POST">
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Senha">
+                        <br>
+                        <input type="button" class="button" value="Login">
+                        <input type="checkbox" value="bool">Lembrar de min<br>
+                        <a class="linkesqueceu" href="#">Esqueceu sua senha?</a>
+                </div>
             </div>
         </section>
     </div>

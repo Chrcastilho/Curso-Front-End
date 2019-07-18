@@ -1,13 +1,38 @@
+.header {
+    padding: 5px;
+    background: hsl(0, 0%, 90%);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background: hsl(0, 0%, 90%);
+    color: white;
+}
+
+a:visited {
+    color: #008CBA;
+}
+
 * {
     padding: 0;
     margin: 0;
-    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    line-height: 150%;
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 2px 4px  hsl(0, 0%, 80%);
 }
 
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
     background: url(../images/binary-code.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -16,15 +41,7 @@ body {
 }
 
 main {
-    flex: 1 0 auto
-}
-
-.header {
-    padding: 5px;
-    text-align: center;
-    background: darkgray;
-    color: #fff;
-    font-size: 20px
+    flex: 1 0 auto;
 }
 
 #center-box {
@@ -32,69 +49,85 @@ main {
     margin: 25% auto;
     height: 400px;
     width: 600px;
-    background: rgb(88, 146, 170);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.left-box {
+.right-box {
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    background: hsl(0, 0%, 90%);
+}
+
+.right-box-inside {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 80%;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    width: 190px;
-    height: 400px;
-    background: rgb(88, 146, 170);
+    width: 80%;
 }
 
-.right-box {
-    position: absolute;
+.left-box {
     top: 0;
-    right: 0;
-    box-sizing: border-box;
-    padding: 10px 5%;
-    width: 410px;
-    height: 400px;
-    background-color: darkgray
-}
-
-input[type="email"], input[type="password"] {
-    display: block;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    padding: 4px;
-    width: 220px;
-    height: 32px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #aaa;
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    transition: 0.2s ease;
-}
-
-.footer {
-    position: fixed;
     left: 0;
-    bottom: 0;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    background: #008CBA;
+}
+
+.left-box-inside {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Bloco adaptado internet https://www.sanwebe.com/2014/08/css-html-forms-designs */
+
+/* Informacao para exececao https://css-tricks.com/styling-texty-inputs-only/ */
+
+input:not([type=button]):not([type=checkbox]) {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 45px;
+    text-align: left;
+}
+
+/* Botao esta com borda estranha */
+
+.button {
+    background-color: #008CBA;
+    border-radius: 10px;
     width: 100%;
-    padding: 10px;
-    background-color: darkgray;
-    color: #fff;
-    text-align: center
+    color: white;
+    padding: 2% 5%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .namelogo {
-    font-size: 300%;
-    transform: translate(-105%, 100%);
-    text-align: center;
-    color: black;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    color: white;
+    text-shadow: none;
+    font-size: 30px;
 }
 
 .imagelock {
-    width: 50%;
-    padding: 0 25%;
-    transform: translate(-105%, 100%);
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
