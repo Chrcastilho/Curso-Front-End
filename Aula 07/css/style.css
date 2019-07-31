@@ -1,9 +1,64 @@
-#center-box {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0px 5px
+
+* {
+  font-family: Sans-serif;
+  /* opacity: 0.9; */
+  /* **Correcao de borda ** */
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  color: white;
   }
+
+.header {
+  height: 19%;
+  margin: 15px;
+  font-size: 60%
+}
+
+.buttuonsadvance {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin: 1%;
+  justify-content: space-around;
+}
+
+.buttuonsadvance>div {
+  text-align: center;
+}
+
+#display{
+  padding: 0;
+  margin: -20px;
+  background: transparent;
+  text-align: right;
+  font-size: 300%;
+}
+
+#center-box {
+  border: 1px;
+  background-color: rgb(34, 35, 36);
+  width: 326px;
+  height: 536px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0px 5px;
+}
+
+.grid-container {
+  height: 100%;
+  grid-gap: 1.9px;
+  background: rgb(22, 22, 22);
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.grid-container>div {
+  text-align: center;
+}
+
+.num{
+background: rgb(7, 7, 7);
+font-size: 150%;
+}

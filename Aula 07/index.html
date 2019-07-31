@@ -7,46 +7,58 @@
 </head>
 
 <body>
+    <!-- background="/images/calc.png"> -->
     <div class="main">
         <section id="center-box">
+            <div class="header"> Calculator </div>
             <form name="calc">
-                <input class="textarea" placeholder="0">
-                <table>
-                    <tr>
-                            <tr>
-                                    <td><input type="button" value="CE"></td>
-                                    <td><input type="button" value="C"></td>
-                                    <td><input type="button" value="<"></td>
-                                    <td><input type="button" value="/"></td>
-                                    </tr>
-                                    <tr>
-                                    <td><input type="button" value="7"></td>
-                                    <td><input type="button" value="8"></td>
-                                    <td><input type="button" value="9"></td>
-                                    <td><input type="button" value="X"></td>
-                                    </tr>
-                                    <tr>
-                                    <td><input type="button" value="4"></td>
-                                    <td><input type="button" value="5"></td>
-                                    <td><input type="button" value="6"></td>
-                                    <td><input type="button" value="-"></td>
-                                    </tr>
-                                    <tr>
-                                    <td><input type="button" value="1"></td>
-                                    <td><input type="button" value="2"></td>
-                                    <td><input type="button" value="3"></td>
-                                    <td><input type="button" value="+"></td>
-                                    </tr>
-                                    <tr>
-                                    <td><input type="button" value="+-"></td>
-                                    <td><input type="button" value="0"></td>
-                                    <td><input type="button" value="."></td>
-                                    <td><input type="button" value="="></td>
-                                    </tr>
-                    </tr>
-                </table>
-            </form>
-        </section>
+                <input id="display" name="display" placeholder="0">
+                <p></p>
+                <div class="buttuonsadvance">
+                    <span class="MC" type="button" onclick="calculadora(MC)">MC</span>
+                    <span class="MR" type="button" onclick="calculadora(MR)">MR</span>
+                    <span class="M+" type="button" onclick="calculadora(M)">M+</span>
+                    <span class="M-" type="button" onclick="calculadora(M)">M-</span>
+                    <span class="MS" type="button" onclick="calculadora(MS)">MS</span>
+                    <span class="Mseta" type="button" onclick="calculadora(M)">M ̌ </span>
+                </div>
+
+                <div class="grid-container">
+                    <div class="percent" type="button" onclick="calculadora(percent)">%</div>
+                    <div class="raiz" type="button" onclick="calculadora(raiz)">√ </div>
+                    <div class="x2" type="button" onclick="calculadora(xelevado2)"><i>x²</i></div>
+                    <div class="1/x" type="button" onclick="none()"><i>1/x</i></div>
+
+                    <div class="ce" type="button" onclick="clean()">CE</div>
+                    <div class="c" type="button" onclick="clean()">C</div>
+                    <div class="del" type="button" onclick="del()">◄</div>
+                    <div class="÷" type="button" onclick="calculadora('÷')">÷</div>
+
+                    <div class="7 num" type="button" onclick="calculadora(7)">7</div>
+                    <div class="8 num" type="button" onclick="calculadora(8)">8</div>
+                    <div class="9 num" type="button" onclick="calculadora(9)">9</div>
+                    <div class="X" type="button" onclick="sinais()">X</div>
+
+                    <div class="4 num" type="button" onclick="calculadora(4)">4</div>
+                    <div class="5 num" type="button" onclick="calculadora(5)">5</div>
+                    <div class="6 num" type="button" onclick="calculadora(6)">6</div>
+                    <div class="-" type="button" onclick="subtract()">-</div>
+
+                    <div class="1 num" type="button" onclick="calculadora(1)">1</div>
+                    <div class="2 num" type="button" onclick="calculadora(2)">2</div>
+                    <div class="3 num" type="button" onclick="calculadora(3)">3</div>
+                    <div class="+" type="button" onclick="add()">+</div>
+
+                    <div class="+-" type="button" onclick="calculadora('±')">±</div>
+                    <div class="0 num" type="button" onclick="calculadora(0)">0</div>
+                    <div class=" ." type="button" onclick="calculadora('.')">.</div>
+                    <div class="=" type=" button" onclick="equal()">=</div>
+                </div>
+    </div>
+    </form>
+    </section>
+    <script src="/js/script.js">
+    </script>
 </body>
 
 </html>
