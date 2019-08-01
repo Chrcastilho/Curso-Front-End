@@ -1,40 +1,76 @@
-var temp;
-function calculadora(num) {
-    temp = document.getElementById("display").value;
-    document.getElementById("display").value = temp + num;
+var useequal = false;
+
+function calculator(num) {
+    toDisplay(document.getElementById("display").value + num);
 }
 
 function clean() {
-    document.getElementById("display").value = null;
-    temp = null;
-}
-
-function add() {
-    temp = document.getElementById("display").value;
-    var lastnumber = temp.substr(temp.length - 1, temp.length);
-    if (!(isNaN(lastnumber)) && lastnumber == null) {
-        document.getElementById("display").value = temp + '+';
-    }
-}
-
-function subtract() {
-    temp = document.getElementById("display").value;
-    
-    if (!(isNaN(temp.substr(temp.length - 1, temp.length))) && (temp.substr(temp.length - 1, temp.length)) == null) {
-        document.getElementById("display").value = temp + '-';
-    }
-}
-
-function equal() {
-    document.getElementById("display").value = temp;
+    toDisplay(null);
 }
 
 function del() {
-    temp = document.getElementById("display").value;
-    document.getElementById("display").value = temp.substr(0, temp.length - 1);
+    var num = document.getElementById("display").value;
+    document.getElementById("display").value = num.substring(0, num.length - 1);
 }
 
-function lastnumber(number) {
-    var lastnumber = number.substr(number.length - 1, number.length);
-    return lastnumber;
+function signalmethod(signal) {
+    var temp = getDisplay();
+    if (isNaN(temp.substring(temp.length-1, temp.length))) {
+        temp = temp.substring(0, temp.length - 1) + signal;
+        toDisplay(temp);
+    }
+    else{
+        temp = temp+signal;
+        toDisplay(temp);
+    }
 }
+
+function exp() {
+    var temp = stringExp(
+        getDisplay());
+    toDisplay(Math.exp(temp));
+}
+
+function exponent() {
+    var temp = stringExp(
+        getDisplay());
+    toDisplay(Math.pow(temp, 2));
+}
+
+function equal() {
+    var num = getDisplay();
+    var temp = stringExp(num);
+    toDisplay(temp);
+
+}
+
+function neGate() {
+    var temp = -1 * getDisplay();
+    if (temp != NaN) {
+        toDisplay(temp);
+    }
+}
+
+// Helpers
+
+function toDisplay(val) {
+    document.getElementById("display").value = val;
+}
+
+function getDisplay() {
+    return document.getElementById("display").value;
+}
+
+function lastNumber(num) {
+    return num.substring(num.length, num.length - 1);
+}
+
+function stringExp(exp) {
+    return new Function('return ' + exp)();
+}
+
+/*
+Recursos usados:
+Function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function
+*/
