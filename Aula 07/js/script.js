@@ -1,7 +1,4 @@
-var useequal = false;
-
-var teste= 0;
-teste++
+var assistanceDisplay = [];
 
 function calculator(num) {
     toDisplay(getDisplay() + num);
@@ -16,45 +13,57 @@ function del() {
     document.getElementById("display").value = num.substring(0, num.length - 1);
 }
 
+function limpa() {
+    assistanceDisplay = [];
+    toAssistance(assistanceDisplay);
+}
+
 function signalmethod(signal) {
     var temp = getDisplay();
     //Troca de Sinal caso seja
-    if (isNaN(temp.substring(temp.length-1, temp.length))) {
+    if (isNaN(temp.substring(temp.length - 1, temp.length))) {
         temp = temp.substring(0, temp.length - 1) + signal;
         toDisplay(temp);
     }
     //Concatena 
-    else{
-        temp = temp+signal;
+    else {
+        temp = temp + signal;
+        assistanceDisplay.push(temp);
+        toAssistance(assistanceDisplay);
         toDisplay(temp);
     }
 }
 
 function exp() {
-    var temp = stringExp(
-        getDisplay());
-    toDisplay(Math.exp(temp));
+    temp = getDisplay();
+    if (isNumber(temp)) toDisplay(Math.sqrt(temp))
 }
 
 function exponent() {
     numtemp = getDisplay();
-    if(numtemp != ""){
-    var temp = stringExp(
-        numtemp);
-    toDisplay(Math.pow(temp, 2));}
+    if (isNumber(numtemp)) {
+        var temp = stringExp(
+            numtemp);
+        toDisplay(Math.pow(temp, 2));
+    }
+}
+
+function oneoutof(){
+    toDisplay(
+        (1/(getDisplay()))
+    )
 }
 
 function equal() {
     var num = getDisplay();
-    if(num == ""){return;}
     var temp = stringExp(num);
-    toDisplay(temp);
-
+    if (temp == 0) { toDisplay('') }
+    else if (isNumber(temp)) toDisplay(temp);
 }
 
 function neGate() {
     var temp = -1 * getDisplay();
-    if (temp != NaN) {
+    if (isNumber(temp)) {
         toDisplay(temp);
     }
 }
@@ -65,12 +74,12 @@ function toDisplay(val) {
     document.getElementById("display").value = val;
 }
 
-function getDisplay() {
-    return document.getElementById("display").value;
+function toAssistance(val) {
+    document.getElementById("assistance").value = val;
 }
 
-function toAssistance() {
-    return document.getElementById("assistance").value;
+function getDisplay() {
+    return document.getElementById("display").value;
 }
 
 function lastNumber(num) {
@@ -78,7 +87,26 @@ function lastNumber(num) {
 }
 
 function stringExp(exp) {
-    return new Function('return ' + exp)();
+    try {
+        return new Function('return ' + exp)();
+
+    } catch (error) {
+
+    }
+}
+
+function isNumber(temp) {
+    Boolean = false;
+    //Uso do try catch para assegurar que caso exista comparacao de um valor invalido nao estoure erro
+    try {
+        temp = stringExp(temp);
+    } catch (error) {
+    }
+
+    if (((typeof temp) == 'number') && (!(isNaN(temp)))) {
+        return Boolean = true;
+    }
+    return Boolean;
 }
 
 /*

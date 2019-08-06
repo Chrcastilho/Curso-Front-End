@@ -12,11 +12,11 @@
         <section id="center-box">
             <div class="header"> Calculator </div>
             <form name="calc">
-                <div id="assistance" name="assistance"> </div>
+                <input id="assistance" name="assistance" placeholder=" ">
                 <input id="display" name="display" placeholder="0">
                 <p></p>
                 <div class="buttuonsadvance">
-                    <span class="MC" type="button" onclick="calculator(MC)">MC</span>
+                    <span class="MC" type="button" onclick="limpa()">MC</span>
                     <span class="MR" type="button" onclick="calculator(MR)">MR</span>
                     <span class="M+" type="button" onclick="calculator(M)">M+</span>
                     <span class="M-" type="button" onclick="calculator(M)">M-</span>
@@ -25,10 +25,10 @@
                 </div>
 
                 <div class="grid-container">
-                    <div class="percent" type="button" onclick="signalmethod('%')">%</div>
-                    <div class="exp" type="button" onclick="exp(exp)">√ </div>
+                    <div class="percent" type="button" onclick="percent()">%</div>
+                    <div class="exp" type="button" onclick="exp()">√ </div>
                     <div class="x2" type="button" onclick="exponent()"><i>x²</i></div>
-                    <div class="1/x" type="button" onclick="none()"><i>1/x</i></div>
+                    <div class="1/x" type="button" onclick="oneoutof()"><i>1/x</i></div>
 
                     <div class="ce" type="button" onclick="clean()">CE</div>
                     <div class="c" type="button" onclick="clean()">C</div>
@@ -58,7 +58,7 @@
     </div>
     </form>
     </section>
-    <script src="/js/script.js">
+    <script src="js/script.js">
     </script>
 </body>
 

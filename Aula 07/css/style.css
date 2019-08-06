@@ -43,16 +43,16 @@ pointer-events:none; */
   width: 95%;
   margin: 0;
   background: transparent;
+  pointer-events:none;
   text-align: right;
   font-size: 100%;
   color: rgb(255, 255, 255, 0.5)
 }
 
 #center-box {
-  border: 1px;
   background-color: rgb(34, 35, 36);
   width: 326px;
-  height: 536px;
+  height: 1fr;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -66,7 +66,6 @@ pointer-events:none; */
 }
 
 .grid-container {
-  height: 100%;
   grid-gap: 1.9px;
   background: rgb(22, 22, 22);
   display: grid;
