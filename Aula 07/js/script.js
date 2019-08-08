@@ -4,9 +4,15 @@ function calculator(num) {
     toDisplay(getDisplay() + num);
 }
 
-function clean() {
-    toDisplay(null);
+// Forma de construir a funcao
+
+var clean = () => {
+toDisplay(null);
 }
+
+// function clean() {
+//     toDisplay(null);
+// }
 
 function del() {
     var num = getDisplay();
