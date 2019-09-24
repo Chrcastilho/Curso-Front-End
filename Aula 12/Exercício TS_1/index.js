@@ -1,24 +1,20 @@
-var Student = /** @class */ (function () {
-    function Student(firstName, lastName, age) {
+var PerssonClass = /** @class */ (function () {
+    function PerssonClass(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.returnData = firstName + " " + lastName + ", nascido em" + dateBirth(age);
     }
-    return Student;
+    return PerssonClass;
 }());
 function dateBirth(age) {
     var year = (new Date()).getFullYear();
     return year - age;
 }
 function returnClick() {
-    var nameVar = document.getElementById('name');
-    var lastNameVar = document.getElementById('lastName');
-    //var ageVar = document.getElementById('age');
-    var ageVar = 1992;
-    var text = (nameVar + " " + lastNameVar + ", nascido em" + ageVar);
-    console.log(text);
+    var nameVar = document.getElementById('name').value;
+    var lastNameVar = document.getElementById('lastName').value;
+    var ageVar = +(document.getElementById('age').value);
+    var personObj = new PerssonClass(nameVar, lastNameVar, ageVar);
     var divResult = document.getElementsByClassName('output');
-    console.log(divResult);
-    divResult[0].innerHTML = JSON.stringify(text);
+    divResult[0].innerHTML = JSON.stringify(personObj.firstName + ", " + personObj.lastName + " nascido em " + dateBirth(personObj.age));
 }

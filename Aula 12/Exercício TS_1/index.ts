@@ -1,8 +1,6 @@
-class Student {
-    returnData: string;
+class PerssonClass {
     constructor(public firstName: string, public lastName: string, public age: number) {
-        this.returnData = firstName + " " + lastName + ", nascido em" + dateBirth(age);
-    }
+            }
 }
 
 interface Person {
@@ -17,14 +15,11 @@ function dateBirth(age: number): number{
 }
 
 function returnClick() {
-var nameVar = document.getElementById('name');
-var lastNameVar = document.getElementById('lastName');
-//var ageVar = document.getElementById('age');
-var ageVar = 1992;
+var nameVar = (<HTMLInputElement>document.getElementById('name')).value;
+var lastNameVar = (<HTMLInputElement>document.getElementById('lastName')).value;
+var ageVar = +((<HTMLInputElement>document.getElementById('age')).value);
 
-var text = (nameVar+ " " + lastNameVar + ", nascido em" + ageVar);
-console.log(text);
+var personObj = new PerssonClass(nameVar,lastNameVar,ageVar);
 var divResult = document.getElementsByClassName('output');
-console.log(divResult);
-divResult[0].innerHTML = JSON.stringify(text);
+divResult[0].innerHTML = JSON.stringify(personObj.firstName + ", " + personObj.lastName + " nascido em " + dateBirth(personObj.age));
 }
