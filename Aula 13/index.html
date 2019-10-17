@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+        <form>
+            <label>Nome</label>
+            <input id="input-nome" type="text">
+
+            <label>Sobrenome</label>
+            <input id="input-sobrenome" type="text">
+
+            <label>Idade</label>
+            <input id="input-idade" type="number">
+
+            <label>Nacionalidade</label>
+            <input id="input-nacionalidade" type="text">
+
+            <label>Tipo de contato</label>
+            <select name="tipo-contato" id="select-tipo-contato">
+                <option value="1">Residencial</option>
+                <option value="2">Comercial</option>
+            </select>
+
+            <label>Contato</label>
+            <input id="input-contato" type="text">
+
+            <button type="button" onclick="add()">Add me!</button>
+        </form>
+
+        <div class="view">
+            <div class="results">
+                <span class="title">Pessoas</span>
+                <div class="list" id="output-pessoa">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

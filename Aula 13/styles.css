@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	display: flex;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.content {
+	padding: 100px;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content form {
+	display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+	padding: 20px;
+	height: 400px;
+    background: #676767;
+}
+
+.content form>input, .content form>select {
+	min-width: 300px;
+	width: 25%;
+	background: #f6f6f6;
+	border: 1px solid #f3f3f3;
+	height: 30px;
+	margin: 0px 0px 16px;
+	border-radius: .25rem;
+}
+
+.content form>select {
+	height: 34px;
+}
+
+.content form .radio-group {
+	display: flex;
+	flex-direction: row;
+	margin: 0px 0px 16px;
+	justify-content: center;
+}
+
+.content form .radio-group .radio {
+	width: 16px;
+	height: 16px;
+	margin: 0 4px;
+}
+
+.content form .radio-group label {
+	margin-left: 2px;
+	margin-right: 15px;
+	align-self: center;
+}
+
+.content form label {
+	font-size: 14px;
+	font-family: 'Roboto';
+	color: #f3f3f3;
+}
+
+.content form button {
+	font-size: 18px;
+	font-family: 'Roboto';
+    color: #f3f3f3;
+    background: #333333;
+    border: none;
+    border-radius: .5rem;
+    height: 40px;
+}
+
+.content form button:hover {
+	box-shadow: 1px 1px 1px 1px #00000050;
+	cursor: pointer;
+}
+
+.content form button:focus {
+    outline: none;
+}
+
+
+.content form button:active {
+	position: relative;
+	top: 1px;
+	left: 1px;
+}
+
+.content .view {
+	margin: 0px auto;
+	min-width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content .view .results {
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.content .view .title {
+	background: #f3f3f3;
+    word-break: break-all;
+    color: #333333;
+    font-family: 'Roboto';
+    font-size: 18px;
+	padding: 8px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.content .view .list {
+	background: #6e8197;
+	display: flex;
+	flex-direction: column;
+    word-break: break-all;
+    color: #f3f3f3;
+    font-family: 'Roboto';
+    font-size: 15px;
+    line-height: 32px;
+}
+
+.content .view .list .pessoa {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns:  1fr 1fr;
+	border-bottom: 1px solid white;
+}
