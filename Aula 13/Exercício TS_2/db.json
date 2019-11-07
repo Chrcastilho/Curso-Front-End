@@ -1,0 +1,30 @@
+{
+  "pessoas": [
+    {
+      "id:": 1,
+      "nome": "Antônio",
+      "sobrenome": "Silva",
+      "idade": 25,
+      "nacionalidade": "Brasileiro",
+      "contato": [
+        {
+          "tipo": 2,
+          "contato": "44999115554"
+        }
+      ]
+    },
+    {
+      "id:": 2,
+      "nome": "Ana",
+      "sobrenome": "Souza",
+      "idade": 33,
+      "nacionalidade": "Brasileiro",
+      "contato": [
+        {
+          "tipo": 1,
+          "contato": "4234569988"
+        }
+      ]
+    }
+  ]
+}
