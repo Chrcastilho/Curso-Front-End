@@ -1,0 +1,59 @@
+<div class="content">
+    <div class="container">
+        <div class="row mt-48">
+            <div class="col-12">
+                <img src="../../../assets/img/logo_eclesial_login.svg" class="mx-auto d-block" width="216"
+                    title="logo_eclesial" alt="logo_eclesial">
+            </div>
+        </div>
+        <div class="row mt-32">
+            <div class="col-12 ">
+                <form [formGroup]="formGroup" class="form mx-auto">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <p class="login-title">Faça login na sua conta.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3 w-100">
+                        <div class="col-12 px-0">
+                            <input formControlName="email" class="login-ipt" type="email" placeholder="Digite seu e-mail">
+                        </div>
+                    </div>
+                    <div class="row mb-3 w-100">
+                        <div class="col-12 px-0">
+                            <input formControlName="senha" class="login-ipt" type="password" placeholder="Digite sua senha">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <button type="button" (click)="validaCampos()" routerLinkActive="router-link-active"  class="login-btn">
+                                Entrar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <a class="forgot" [routerLink]="['/recover']">Esqueceu sua senha ?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-12 text-center">
+                <span class="copyright">
+                    2019 © Theòs Sistemas Eclesiais - Todos os direitos reservados.
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <span class="version">
+                    v8.1.41.0
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

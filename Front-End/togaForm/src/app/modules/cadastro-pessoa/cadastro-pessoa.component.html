@@ -1,0 +1,98 @@
+<section class="content">
+	<div class="formulario">
+		<div class="title">
+			<p>Novo Registro</p>
+		</div>
+		<form [formGroup]="novoRegistro">
+
+			<span>
+				<label class="label" for="nome">
+					Nome
+					<input class="input" id="nome" type="text" formControlName="nome">
+				</label>
+			</span>
+
+			<span>
+				<label class="label" for="nome">
+					Sobrenome
+					<input class="input" id="nome" type="text">
+				</label>
+			</span>
+
+			<div class="grid-1">
+				<span>
+					<label class="label" for="dataNascimento">
+						Data nascimento
+						<input formControlName="dataNascimento" class="input" id="dataNascimento" type="text">
+						<span>{{novoRegistro.get('dataNascimento').value}}</span>
+					</label>
+				</span>
+				<span>
+					<label class="label" for="nome">
+						Telefone
+						<input class="input" id="nome" type="text">
+					</label>
+				</span>
+			</div>
+
+			<div></div>
+
+			<span>
+				<label class="label" for="nome">
+					Endereço
+					<input class="input" id="nome" type="text">
+				</label>
+			</span>
+
+			<div class="grid-2">
+				<span>
+					<label class="label" for="nome">
+						Número
+						<input class="input" id="nome" type="text">
+					</label>
+				</span>
+
+				<span>
+					<label class="label" for="nome">
+						Complemento
+						<input class="input" id="nome" type="text">
+					</label>
+				</span>
+			</div>
+
+
+			<span>
+				<label class="label" for="bairro">
+					Bairro
+					<input class="input" id="bairro" type="text">
+				</label>
+			</span>
+
+			<div class="grid-2">
+				<span>
+					<label class="label" for="estado">
+						Estado
+						<select formControlName="estado" class="input" id="estado" type="text">
+							<option *ngFor="let estado of estadoList" [ngValue]="estado.id">{{estado.uf}}</option>
+						</select>
+					</label>
+				</span>
+
+				<span>
+					<label class="label" for="cidade">
+						Cidade
+						<input formControlName="cidade" class="input" id="cidade" type="text">
+					</label>
+				</span>
+			</div>
+
+			<div></div>
+
+			<div class="act-buttons">
+				<button class="button" type="button">Salvar</button>
+				<button class="button" type="button">Limpar</button>
+			</div>
+		</form>
+
+	</div>
+</section>

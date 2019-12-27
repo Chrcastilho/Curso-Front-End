@@ -1,0 +1,79 @@
+
+$gray: #707070;
+
+.button {
+	width: 200px;
+	height: 40px;
+	background: #D5D5D5;
+	color: $gray;
+	border: none;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+
+	float: right;
+	margin: 0px 0px 0px 40px;
+
+	font-size: 24px;
+
+}
+
+.label {
+	width: 100%;
+	color: $gray;
+}
+
+.input {
+	color: $gray;
+	width: 100%;
+	border: 1px solid $gray;
+	height: 40px;
+}
+
+.content{
+	height: 100vh;
+	background: #008C9F; 	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.formulario {
+	background: #F2F2F2;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+	max-width: 1280px;
+	min-height: 540px;
+
+	padding: 50px;
+
+	@media screen and (min-width: 1360px) {
+		width: 1280px;
+	}
+}
+
+.title {
+	color: $gray;
+	font-size: 48px;
+	text-align: center;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 50px;
+}
+
+.grid-1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 40px;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: 120px calc(93% - 120px);
+	column-gap: 40px;
+}
+
+.act-buttons {
+	padding: 30px 0px;
+}

@@ -1,0 +1,32 @@
+Criar um modulo
+Cria componente
+Deixar visivel para outros lugares
+coloque os componente que vao ser exportados declarados no exports do module criado
+e importe o module criado no module raiz.
+
+style do container
+//Tela principal
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: #008c9f;
+  min-height: 100vh;
+  min-width: 100vw;
+
+  padding: 15px;
+}
+criar um form
+
+.form {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  min-height: 200px;
+  max-height: 600px;
+  max-width: 560px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 45px;
+}
