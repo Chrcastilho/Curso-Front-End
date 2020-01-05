@@ -9,7 +9,7 @@
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu endereco de e-mail" maxlength="200" formControlName="email">
         <label for="labelSenha">Senha</label>
         <input type="password" class="form-control" id="senha" aria-describedby="senhalHelp" placeholder="Sua senha" maxlength="50" formControlName="senha">
-        <button type="button" class="btn btn-primary btn-lg">Login</button>
+        <button type="button" (click)="validaCampos()" class="btn btn-primary btn-lg">Login</button>
     </form>
     <div class="footer">*Campos obrigatorios</div>
 </div>

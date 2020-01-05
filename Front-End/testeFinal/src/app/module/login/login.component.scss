@@ -1,9 +1,9 @@
-*{
+* {
   font-family: Roboto;
 }
 
 .content {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 22px;
   display: flex;
   flex-direction: column;
@@ -17,28 +17,29 @@
 .container {
   background-color: #f2f2f2;
   //opacity: 0.8;
-  height: 100vw;
+  height: 100vh;
   width: 500px;
   position: absolute;
   right: 0px;
+  padding: 0px;
 }
 
 .header {
-    background-color: #216690;
-    width: 100%;
-    height: 95px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-left: 30px;
-    color: white;
-    font-size: 32px;
-    font-weight: 900;
-    box-shadow: 0 0 0.1em black;
+  background-color: #216690;
+  width: 100%;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 30px;
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+  box-shadow: 0 0 0.1em black;
 }
 
-.footer{
-  padding-left: 20px;
+.footer {
+  padding: 30px;
   font-size: 13px;
   color: red;
   //Estudar mais postion
@@ -46,22 +47,21 @@
   bottom: 0;
 }
 
-.form-group{
+.form-group {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 160px 80px; 
-  
+  transform: translate(30%, 50%)
 }
 
-p  {
+p {
   font-size: 37px;
   font-weight: 900;
   margin-bottom: 40px;
 }
 
-button{
+button {
   margin-top: 50px;
   font-weight: 900;
   font-size: 25px;
