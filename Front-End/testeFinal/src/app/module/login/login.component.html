@@ -1,16 +1,16 @@
 <div class="content">
     <div class="container">
-    <div class="header">
+    <header>
         Acelera Theos
-    </div>
+    </header>
     <form [formGroup]="formConta" class="form-group" (ngSubmit)="onSubmit()">
         <p>Acesso ao sistema</p>
-        <label for="labelEmail">E-mail</label>
+        <label for="labelEmail">* E-mail</label>
         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Seu endereco de e-mail" maxlength="200" formControlName="email">
-        <label for="labelSenha">Senha</label>
+        <label for="labelSenha">* Senha</label>
         <input type="password" class="form-control" id="senha" aria-describedby="senhalHelp" placeholder="Sua senha" maxlength="50" formControlName="senha">
         <button type="button" (click)="validaCampos()" class="btn btn-primary btn-lg">Login</button>
     </form>
-    <div class="footer">*Campos obrigatorios</div>
+    <footer>* Campos obrigatorios</footer>
 </div>
 </div>

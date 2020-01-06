@@ -24,41 +24,12 @@
   padding: 0px;
 }
 
-.header {
-  background-color: #216690;
-  width: 100%;
-  height: 95px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-left: 30px;
-  color: white;
-  font-size: 32px;
-  font-weight: 900;
-  box-shadow: 0 0 0.1em black;
-}
-
-.footer {
-  padding: 30px;
-  font-size: 13px;
-  color: red;
-  //Estudar mais postion
-  position: fixed;
-  bottom: 0;
-}
-
 .form-group {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translate(30%, 50%)
-}
-
-p {
-  font-size: 37px;
-  font-weight: 900;
-  margin-bottom: 40px;
 }
 
 button {

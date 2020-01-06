@@ -1,0 +1,32 @@
+header {
+  padding-left: 60px;
+  height: 120px;
+}
+
+.content {
+  background-image: url(src\assets\img\template_cadastro.png);
+  height: 100vh;
+  //background-color: #f9f2f2;
+}
+
+//Verifcar centralizacao correta
+.container {
+  opacity: 0.3;
+  transform: translate(0, 11%);
+  height: 71vh;
+  background-color: black;
+  padding: 30px;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 40vh;
+  grid-gap: 20px;
+}
+
+
+
+label {
+  font-size: large;
+}
