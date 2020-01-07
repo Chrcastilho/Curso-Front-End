@@ -6,60 +6,91 @@
         <p class="">Novo Cadastro</p>
         <div class="container-grid">
             <form [formGroup]="formCadastro" class="form-group" (ngSubmit)="onSubmit()">
-                <span style='color: red'>* </span>
-                <label for="labelNome">Nome</label>
-                <input type="text" class="form-control" id="nome" aria-describedby="NomeHelp" maxlength="200"
-                    formControlName="nome">
+                <section class="grid-1">
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelNome">Nome</label>
+                        <input type="text" class="form-control" id="nome" aria-describedby="NomeHelp" maxlength="200"
+                            formControlName="nome">
+                    </span>
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelsobreNome">Sobre Nome</label>
+                        <input type="text" class="form-control" id="sobreNome" aria-describedby="sobreNomelHelp"
+                            maxlength="50" formControlName="sobreNome">
+                    </span>
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelIdade">Idade</label>
+                        <input type="number" class="form-control" id="Idade" aria-describedby="IdadelHelp"
+                            maxlength="50" formControlName="idade">
+                    </span>
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labeluf">Sexo</label>
+                        <select class="form-control" id="sexo" aria-describedby="uflHelp" maxlength="50"
+                        formControlName="sexo">
+                            <option *ngFor="let sexo of sexoList" [ngValue]="sexo.id">{{sexo.sexo}}</option>
+                        </select>
+                    </span>
+                    </section>
 
-                <span style='color: red'>* </span>
-                <label for="labelestadoCivil">Estado Civil</label>
-                <input type="number" class="form-control" id="estadoCivil" aria-describedby="estadoCivillHelp"
-                    maxlength="50" formControlName="estadoCivil">
+                <section class="grid-2">
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelestadoCivil">Estado Civil</label>
+                        <input type="text" class="form-control" id="estadoCivil" aria-describedby="estadoCivillHelp"
+                            maxlength="50" formControlName="estadoCivil">
+                    </span>
+                </section>
 
-                <span style='color: red'>* </span>
-                <label for="labelendereco">Endereco</label>
-                <input type="number" class="form-control" id="endereco" aria-describedby="enderecolHelp" maxlength="50"
-                    formControlName="endereco">
+                <section class="grid-3">
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelendereco">Endereco</label>
+                        <input type="text" class="form-control" id="endereco" aria-describedby="enderecolHelp"
+                            maxlength="50" formControlName="endereco">
+                    </span>
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelnumero">Numero</label>
+                        <input type="number" class="form-control" id="numero" aria-describedby="numerolHelp"
+                            maxlength="50" formControlName="numero">
+                    </span>
+                    <span>
+                        <span style='color: red'>* </span>
+                        <label for="labelcomplemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" aria-describedby="complementolHelp"
+                            maxlength="50" formControlName="complemento">
+                    </span>
+                </section>
+                <section class="grid-4">
+                    <span>
+                    <span style='color: red'>* </span>
+                    <label for="labeluf">UF</label>
+                    <select class="form-control" id="uf" aria-describedby="uflHelp" maxlength="50"
+                    formControlName="uf">
+                        <option *ngFor="let estado of estadoList" [ngValue]="estado.id">{{estado.uf}}</option>
+                    </select>
+                </span>
+            <span>
+                    <span style='color: red'>* </span>
+                    <label for="labelcidade">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" aria-describedby="cidadelHelp" maxlength="50"
+                        formControlName="cidade">
+                    </span>
+                </section>
 
-                <span style='color: red'>* </span>
-                <label for="labelsobreNome">sobreNome</label>
-                <input type="number" class="form-control" id="sobreNome" aria-describedby="sobreNomelHelp"
-                    maxlength="50" formControlName="sobreNome">
-
-                <span style='color: red'>* </span>
-                <label for="labelIdade">Idade</label>
-                <input type="number" class="form-control" id="Idade" aria-describedby="IdadelHelp" maxlength="50"
-                    formControlName="idade">
-
-                <span style='color: red'>* </span>
-                <label for="labelsexo">sexo</label>
-                <input type="number" class="form-control" id="sexo" aria-describedby="sexolHelp" maxlength="50"
-                    formControlName="sexo">
-
-                <span style='color: red'>* </span>
-                <label for="labelnumero">numero</label>
-                <input type="number" class="form-control" id="numero" aria-describedby="numerolHelp" maxlength="50"
-                    formControlName="numero">
-
-                <span style='color: red'>* </span>
-                <label for="labelcomplemento">complemento</label>
-                <input type="number" class="form-control" id="complemento" aria-describedby="complementolHelp"
-                    maxlength="50" formControlName="complemento">
-
-                <span style='color: red'>* </span>
-                <label for="labelcidade">cidade</label>
-                <input type="number" class="form-control" id="cidade" aria-describedby="cidadelHelp" maxlength="50"
-                    formControlName="cidade">
-                <!-- <span style='color: red'>* </span>
-                <label for="labeluf">UF</label>
-                <select name="" id="">
-                <option type="combobox" class="form-control" id="uf" aria-describedby="uflHelp" 
-                    maxlength="50" formControlName="uf">
-                </select> -->
                 <p></p>
-                <button type="button" (click)="validaCampos()" class="btn btn-primary btn-lg">Salvar</button>
             </form>
+            <section class="footer-page">
             <footer>* Campos obrigatorios</footer>
+            <section class="buttons">
+            <button type="button" (click)="saveButton()" class="btn btn-success btn-lg">Salvar</button>
+            <button type="button" (click)="cancelButton()" class="btn btn-danger btn-lg">Cancelar</button>
+            <button type="button" (click)="cleanButton()" class="btn btn-warning btn-lg">Limpar</button>
+        </section>
+    </section>
         </div>
     </div>
 </div>

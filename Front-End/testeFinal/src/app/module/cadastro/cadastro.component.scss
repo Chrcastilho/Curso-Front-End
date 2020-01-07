@@ -1,31 +1,71 @@
+*{
+  grid-gap: 20px;
+}
+
 header {
   padding-left: 60px;
   height: 120px;
 }
 
 .content {
-  background-image: url(src\assets\img\template_cadastro.png);
+//  background-image: url(src\assets\img\template_cadastro.png);
   height: 100vh;
   //background-color: #f9f2f2;
 }
 
 //Verifcar centralizacao correta
 .container {
-  opacity: 0.3;
+//  opacity: 0.5;
   transform: translate(0, 11%);
   height: 71vh;
-  background-color: black;
+  background-color: #f2f2f2;
   padding: 30px;
+  border: rgb(221, 221, 221) 1px solid;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.13);
 }
 
-.container-grid {
+.form-group{
+  display: grid;
+  height: 40vh;
+}
+
+//Tentativa para todas classes com grid seja com display tipo grid
+// div[class^="grid"]{
+//   display: grid;
+// }
+
+.grid-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 70px;
+}
+
+.grid-2{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 40vh;
-  grid-gap: 20px;
 }
 
+.grid-3{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+}
 
+.grid-4{
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr 1fr;
+}
+
+.footer-page{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+button{
+box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.33);
+}
 
 label {
   font-size: large;
